@@ -29,14 +29,14 @@ public class code1 {
             int numCan=0, num2Can=0, numRepeat=0;
             for (int k=2; k<i;k++){
                 if (i%k==0)
-                        numCan++;
+                    numCan++;
             }
             if (numCan==0){
                 another = even-i;                
                 if (another==2){
                     verified++;
                     if (verified==1)
-                        System.out.println("The input integer can be expressed as the sum of two prime numbers.");
+                        System.out.format("%d can be expressed as the sum of two prime numbers.",even);
                     System.out.format("%d = %d + %d%n", even, another, i);      
                 }
                 else{
@@ -47,7 +47,7 @@ public class code1 {
                     if (num2Can==0){
                         verified++;
                         if (verified==1)
-                            System.out.println("The input can be expressed as the sum of two prime numbers.");                        
+                            System.out.format("%d can be expressed as the sum of two prime numbers.", even);                        
                         for (int m: arr){
                             if (m==another|| m==i)
                                 numRepeat++;
@@ -60,6 +60,6 @@ public class code1 {
             }
         }
         if (verified ==0)
-            System.out.println("Sorry, Goldbach's Conjecture is not satisfied for the given output.");
+            System.out.format("Sorry, Goldbach's Conjecture is not satisfied for number %d.", even);
     }
 }
